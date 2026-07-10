@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise 💌</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <div id="hearts"></div>
+    <div id="loader">
+
+    <div class="loader-heart">💖</div>
+
+    <h2>Loading a little magic...</h2>
+
+</div>
+<div class="heart h1">💖</div>
+<div class="heart h2">✨</div>
+<div class="heart h3">🌸</div>
+<div class="heart h4">💜</div>
+<div class="heart h5">🦋</div>
+<div id="welcomePage" class="card">
+
+    <div class="emoji">
+        💌
+    </div>
+
+    <h1>Hey Beautiful!</h1>
+
+    <p>
+        A tiny surprise has been waiting patiently just for you...
+    </p>
+<button onclick="openQuestion()">
+    Open the Envelope ✨
+</button>
+   
+
+</div>
+
+
+<div id="questionPage" class="card hidden">
+
+    <div class="emoji">
+        🧸
+    </div>
+
+    <h1>One Tiny Question...</h1>
+
+    <p>
+        Promise you'll smile today? 🌸
+    </p>
+
+    <div class="buttons" id="buttonContainer">
+
+    <button onclick="yesClicked()">
+        Absolutely! 💖
+    </button>
+
+    <button id="noButton">
+        Maybe... 🤭
+    </button>
+
+</div>
+
+<p id="funnyText"></p>
+</div>
+<div id="envelopePage" class="card hidden">
+
+    <div class="envelope-animation">
+        💌
+    </div>
+
+    <h1>Opening your letter...</h1>
+
+    <p>Please wait a moment ✨</p>
+
+</div>
+<div id="letterPage" class="card hidden">
+
+    <div class="emoji">💌</div>
+
+    <h1>For the cutest person</h1>
+
+    <div class="letter">
+
+    <p id="letterText"></p>
+</div>
+
+    </div>
+<div id="countdownPage" class="card hidden">
+
+    <div class="emoji">✨</div>
+
+    <h1 id="countNumber">3</h1>
+
+    <p>Preparing something special for you...</p>
+
+</div>
+<div id="memoryPage" class="card hidden">
+
+    <h1>📸 Our Memories</h1>
+
+    <div class="memory-box">
+
+        <img id="memoryImage" src="assets/photos/together1_surbhi.jpeg">
+
+        <video id="memoryVideo" controls style="display:none;">
+            <source src="" type="video/mp4">
+        </video>
+
+        <p id="memoryCaption"></p>
+
+    </div>
+
+    <button onclick="nextMemory()">Next ➜</button>
+
+</div>
+<div id="finalPage" class="card hidden">
+
+    <div class="emoji">🎂</div>
+
+    <h1>Happy Birthday, Surbhi ❤️</h1>
+
+    <p>
+        Dear Surbhi,
+
+        <br><br>
+
+        Thank you for being one of the most wonderful people in my life.
+
+        <br><br>
+
+        You are really a very very very sweet soul i know. You wanted me to make you a website, haha I did this for you. But yeah, its a bare minuimum for a cutie like you.
+
+        <br><br>
+
+        I never expected for us to bond I swear, but yeah we did. I'll always thank aanchal and god that they made me meet you. 
+
+        <br><br>
+        
+        You are really a very pure soul. You are so sweet i swear. Thanks for listening to all my rants and my non-stop bak-bak and a very big thankyou for guiding me what's wrong and what's right even though i don't listen haha!!!
+
+        <br><br>
+
+        Keep shining, keep smiling, and never stop being the amazing person you are.
+
+        <br><br>
+
+        Happy Birthday once again! 🎉
+
+    </p>
+
+    <h2>With Lots of Love 💖</h2>
+
+    <h3>— Riya 🌸</h3>
+
+    <button onclick="showSurprise()">
+        🎁 One Last Surprise
+    </button>
+
+</div>
+<canvas id="confetti"></canvas>
+<audio id="bgMusic" src="assets/music/music.mp3" loop></audio>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="js/script.js"></script>
+
+
+
+</body>x`
+</html>
