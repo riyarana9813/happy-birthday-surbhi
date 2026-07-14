@@ -6,39 +6,56 @@
 
 body{
 
-    height:100vh;
+    margin:0;
 
-    display:flex;
+    min-height:100vh;
 
-    justify-content:center;
+    display:grid;
 
-    align-items:center;
+    place-items:center;
+
+    padding:20px;
 
     background:linear-gradient(135deg,#ffd6e7,#f3d9ff,#fff3cd);
 
     font-family:'Quicksand',sans-serif;
 
+    overflow-x:hidden;
+    overflow-y:auto;
+
 }
 
 .card{
 
-    width:430px;
+     width:min(90vw,500px);
 
-    background:rgba(255,255,255,0.82);
+    min-height:580px;
+    max-height:90vh;
+    overflow-y:auto;
+
+    background:rgba(255,255,255,.88);
 
     backdrop-filter:blur(18px);
-
     -webkit-backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,.35);
+    border-radius:28px;
 
-    border-radius:30px;
-
-    padding:50px;
+    padding:28px;
 
     text-align:center;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+    
 
 }
 
@@ -101,9 +118,7 @@ button:hover{
 
 }
 .hidden{
-
-    display:none;
-
+    display:none !important;
 }
 
 .buttons{
@@ -395,24 +410,45 @@ transform:scale(1);
 }
 .memory-box{
 
-margin:25px 0;
+margin:15px 0;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:15px;
 
 }
+
 
 #memoryImage,
 #memoryVideo{
 
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,.15);
+    width:100%;
+
+    max-width:360px;
+
+    max-height:420px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 }
 
 #memoryCaption{
 
-margin-top:18px;
-font-size:20px;
-color:#666;
+margin:0;
+
+font-size:17px;
+
+line-height:1.5;
+
+padding:0 8px;
 
 }
 #finalPage button{
@@ -463,38 +499,128 @@ font-weight:normal;
     transition:opacity .6s ease, transform .6s ease;
 
 }
+.memory-box{
 
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:15px 0;
+
+}
 .memory-box img:hover{
 
     transform:scale(1.02);
 
 }
-@media (max-width:600px){
+@media (max-width:768px){
+
+body{
+
+    padding:15px;
+    align-items:center;
+
+}
 
 .card{
 
-    width:92%;
-
-    padding:28px;
+    width:100%;
+    max-width:420px;
+    padding:30px 22px;
 
 }
 
 h1{
 
-    font-size:32px;
+    font-size:30px;
 
 }
 
 p{
 
     font-size:17px;
+    line-height:1.6;
 
 }
 
 button{
 
     width:100%;
+    margin-top:15px;
 
 }
 
+}
+@media (max-width:600px){
+
+body{
+
+padding:12px;
+
+}
+
+.card{
+
+width:100%;
+
+padding:24px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+p{
+
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
+video{
+
+    width:100%;
+
+    border-radius:18px;
+
+}
+#finalPage{
+
+    justify-content:flex-start;
+
+    padding-top:35px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+}
+
+#finalPage p{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+#finalPage::-webkit-scrollbar{
+    width:6px;
+}
+
+#finalPage::-webkit-scrollbar-thumb{
+    background:#ffc0d9;
+    border-radius:20px;
 }

@@ -13,7 +13,11 @@ music.play();
 
         welcome.style.display="none";
 
-        document.getElementById("questionPage").style.display="block";
+        const questionPage = document.getElementById("questionPage");
+
+questionPage.classList.remove("hidden");
+
+questionPage.style.display = "flex";
 
     },600);
 
@@ -28,15 +32,18 @@ function yesClicked(){
 
         question.style.display="none";
 
-        document.getElementById("envelopePage").style.display="block";
+        document.getElementById("envelopePage").style.display="flex";
 
     },600);
 
     setTimeout(function(){
 
-        document.getElementById("envelopePage").style.display="none";
+      const envelopePage = document.getElementById("envelopePage");
+envelopePage.style.display = "none";
 
-        document.getElementById("letterPage").style.display="block";
+const letter = document.getElementById("letterPage");
+letter.classList.remove("hidden");
+letter.style.display = "flex";
         index = 0;
 document.getElementById("letterText").innerHTML = "";
 typeLetter();
@@ -102,10 +109,11 @@ function typeLetter() {
         // Letter finished
         setTimeout(function(){
 
-            document.getElementById("letterPage").style.display = "none";
+        const letterPage = document.getElementById("letterPage");
 
-            
-            startCountdown();
+letterPage.style.display = "none";
+
+startCountdown();
 
         },3000);
 
@@ -158,7 +166,16 @@ const memories = [
 let currentMemory = 0;
 
 function startMemories(){
+
+    currentMemory = 0;
+
+    const memoryPage = document.getElementById("memoryPage");
+
+    memoryPage.classList.remove("hidden");
+    memoryPage.style.display = "flex";
+
     showMemory();
+
 }
 
 function showMemory(){
@@ -171,41 +188,48 @@ function showMemory(){
 
     caption.innerHTML = item.caption;
 
-    if(item.type==="image"){
+    if(item.type === "image"){
 
-        video.style.display="none";
-        img.style.display="block";
+        video.pause();
+        video.style.display = "none";
 
-        img.src=item.src;
+        img.style.display = "block";
+        img.src = item.src;
 
-        setTimeout(nextMemory,3000);
+        
 
     }
 
     else{
 
-        img.style.display="none";
-        video.style.display="block";
+        img.style.display = "none";
 
-        video.src=item.src;
+        video.style.display = "block";
+        video.src = item.src;
+
         video.load();
         video.play();
 
-        video.onended=nextMemory;
+        video.onended = function(){
+    // Wait for the user to click Next
+};
 
     }
 
 }
-
 function nextMemory(){
 
     currentMemory++;
 
-    if(currentMemory>=memories.length){
+    if(currentMemory >= memories.length){
 
-        document.getElementById("memoryPage").style.display="none";
+        document.getElementById("memoryPage").style.display = "none";
 
-        document.getElementById("finalPage").style.display="block";
+        const finalPage = document.getElementById("finalPage");
+
+        finalPage.classList.remove("hidden");
+        finalPage.style.display = "flex";
+
         birthdayConfetti();
 
         return;
@@ -254,7 +278,10 @@ function showSurprise(){
 }
 function startCountdown(){
 
-    document.getElementById("countdownPage").style.display = "block";
+    const countdownPage = document.getElementById("countdownPage");
+
+countdownPage.classList.remove("hidden");
+countdownPage.style.display = "flex";
 
     const count = document.getElementById("countNumber");
 
@@ -282,7 +309,7 @@ function startCountdown(){
 
                 document.getElementById("countdownPage").style.display="none";
 
-                document.getElementById("memoryPage").style.display="block";
+                document.getElementById("memoryPage").style.display="flex";
 
                 startMemories();
 
